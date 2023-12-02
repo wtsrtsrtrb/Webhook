@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord.app_commands import CommandTree
 from webserver import keep_alive
 
-secret_bot = os.environ['MTE4MDQ1NjAxNDU1NDg2NTc4NA.Glnp7M.THUFLIw8P69MSU5qyCyNkuSyi7q0lPCSBZ2hbI']
+secret_bot = os.environ['MTE4MDQ1NjAxNDU1NDg2NTc4NA.GAmzQa.oAHaRcIrQ539hF7R3VBfbmxqg2cE_z_pNSIXlU']
 
 intents = discord.Intents.default()
 intents.members = True
